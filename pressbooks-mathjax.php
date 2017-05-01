@@ -61,7 +61,7 @@ add_filter( 'pb_latex_renderers', 'pbmj_add_renderer_type' );
 function pbmj_enqueue_scripts( $method ) {
 	if ( 'mathjax' == $method ) {
 		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'pb_mathjax', 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML.js&delayStartupUntil=configured' );
+		wp_enqueue_script( 'pb_mathjax', 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML.js&delayStartupUntil=configured' );
 	}
 }
 add_action( 'pb_enqueue_latex_scripts', 'pbmj_enqueue_scripts' );
